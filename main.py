@@ -24,7 +24,7 @@ elif count == 2:
         type_figure = 'Square'
         perimeter = (size_1 + size_2) * 2
         square = size_1 * size_2
-        print('type_figure : ' f'{size_1 = }, {size_2 = }; {perimeter = }, {square = }')
+        print('Square: ' f'{size_1 = }, {size_2 = }; {perimeter = }, {square = }')
     if size_1 > size_2 or size_2 > size_1:
         type_figure = 'Rectangle'
         perimeter = (size_1 + size_2) * 2
