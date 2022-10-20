@@ -31,6 +31,7 @@ elif count == 2:
         square = size_1 * size_2
         print('Rectangle: ' f'{size_1 = }, {size_2 = }; {perimeter = }, {square = }')
 elif count == 3:
+    type_figure = 'Triangle'
     a, b, c = values
     size_1 = int(a)
     size_2 = int(b)
