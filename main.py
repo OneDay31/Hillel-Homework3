@@ -5,6 +5,7 @@ input_string = input('press enter size: ')
 values = input_string.split()
 count = len(values)
 if count == 1:
+    type_figure = 'Circle'
     a = input_string
     radius = int(a)
     if radius == 0:
@@ -12,8 +13,9 @@ if count == 1:
         quit()
     diameter = radius * 2
     square = int(math.pi *(radius**2))
-    print('Circle: ' f'{radius = }; {diameter = }, {square = }')
+    print(f'{type_figure}: {radius = }; {diameter = }, {square = }')
 elif count == 2:
+    type_figure = 'Square or Rectangle'
     a, b = values
     size_1 = int(a)
     size_2 = int(b)
@@ -24,12 +26,12 @@ elif count == 2:
         type_figure = 'Square'
         perimeter = (size_1 + size_2) * 2
         square = size_1 * size_2
-        print('Square: ' f'{size_1 = }, {size_2 = }; {perimeter = }, {square = }')
+        print(f'{type_figure}: {size_1 = }, {size_2 = }; {perimeter = }, {square = }')
     if size_1 > size_2 or size_2 > size_1:
         type_figure = 'Rectangle'
         perimeter = (size_1 + size_2) * 2
         square = size_1 * size_2
-        print('Rectangle: ' f'{size_1 = }, {size_2 = }; {perimeter = }, {square = }')
+        print(f'{type_figure}: {size_1 = }, {size_2 = }; {perimeter = }, {square = }')
 elif count == 3:
     type_figure = 'Triangle'
     a, b, c = values
@@ -45,4 +47,4 @@ elif count == 3:
     perimeter = size_1 + size_2 + size_3
     p = (size_1 + size_2 + size_3) / 2
     square = int(sqrt(p * (p - size_1) * (p - size_2) * (p - size_3)))
-    print('Triangle: ' f'{size_1 = }, {size_2 = }, {size_3 = }; {perimeter = }, {square = }')
+    print(f'{type_figure}: {size_1 = }, {size_2 = }, {size_3 = }; {perimeter = }, {square = }')
