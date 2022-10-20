@@ -8,12 +8,12 @@ if count == 1:
     type_figure = 'Circle'
     a = input_string
     radius = int(a)
-    if radius == 0:
+    if radius <= 0:
         print ('No such figure exists')
-        quit()
-    diameter = radius * 2
-    square = int(math.pi *(radius**2))
-    print(f'{type_figure}: {radius = }; {diameter = }, {square = }')
+    elif radius > 0:
+        diameter = radius * 2
+        square = int(math.pi *(radius**2))
+        print(f'{type_figure}: {radius = }; {diameter = }, {square = }')
 elif count == 2:
     type_figure = 'Square or Rectangle'
     a, b = values
@@ -21,13 +21,12 @@ elif count == 2:
     size_2 = int(b)
     if 0 in (size_1, size_2):
         print('No such figure exists')
-        quit()
-    if size_1 == size_2:
+    elif size_1 == size_2:
         type_figure = 'Square'
         perimeter = (size_1 + size_2) * 2
         square = size_1 * size_2
         print(f'{type_figure}: {size_1 = }, {size_2 = }; {perimeter = }, {square = }')
-    if size_1 > size_2 or size_2 > size_1:
+    elif size_1 > size_2 or size_2 > size_1:
         type_figure = 'Rectangle'
         perimeter = (size_1 + size_2) * 2
         square = size_1 * size_2
@@ -40,11 +39,10 @@ elif count == 3:
     size_3 = int(c)
     if 0 in (size_1, size_2, size_3):
         print('There are no such triangles')
-        quit()
-    if size_1 + size_2 <= size_3 or size_2 + size_3 <= size_1 or size_1 + size_3 <= size_2:
+    elif size_1 + size_2 <= size_3 or size_2 + size_3 <= size_1 or size_1 + size_3 <= size_2:
         print('There are no such triangles')
-        quit()
-    perimeter = size_1 + size_2 + size_3
-    p = (size_1 + size_2 + size_3) / 2
-    square = int(sqrt(p * (p - size_1) * (p - size_2) * (p - size_3)))
-    print(f'{type_figure}: {size_1 = }, {size_2 = }, {size_3 = }; {perimeter = }, {square = }')
+    elif size_1 > 0 or size_2 > 0 or size_3 > 0:
+        perimeter = size_1 + size_2 + size_3
+        p = (size_1 + size_2 + size_3) / 2
+        square = int(sqrt(p * (p - size_1) * (p - size_2) * (p - size_3)))
+        print(f'{type_figure}: {size_1 = }, {size_2 = }, {size_3 = }; {perimeter = }, {square = }')
