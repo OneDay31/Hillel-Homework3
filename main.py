@@ -27,6 +27,8 @@ elif count == 2:
         elif size_1 > size_2 or size_2 > size_1:
             type_figure = 'Rectsngle'
         print(f'{type_figure}: {size_1 = }, {size_2 = }; {perimeter = }, {square = }')
+    else:
+        print('No such figure exists')
 elif count == 3:
     type_figure = 'Triangle'
     a, b, c = values
