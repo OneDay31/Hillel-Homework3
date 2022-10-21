@@ -13,7 +13,7 @@ if count == 1:
         print ('No such figure exists')
     elif radius > 0:
         diameter = radius * 2
-        square = int(math.pi *(radius**2))
+        square = int(math.pi * (radius**2))
         print(f'{type_figure}: {radius = }; {diameter = }, {square = }')
 elif count == 2:
     a, b = values
