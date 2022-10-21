@@ -6,6 +6,8 @@ input_string = input('press enter size: ')
 values = input_string.split()
 count = len(values)
 if input_string.replace(" ", "").isdigit():
+    print('Entered incorrect data')
+else:
     if count == 1:
         type_figure = 'Circle'
         a = input_string
@@ -43,5 +45,4 @@ if input_string.replace(" ", "").isdigit():
             p = (size_1 + size_2 + size_3) / 2
             square = int(sqrt(p * (p - size_1) * (p - size_2) * (p - size_3)))
             print(f'{type_figure}: {size_1 = }, {size_2 = }, {size_3 = }; {perimeter = }, {square = }.')
-else:
-    print('Entered incorrect data')
+
